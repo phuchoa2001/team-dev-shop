@@ -1,0 +1,34 @@
+.hero {
+
+  &-wrapper {
+    box-sizing: border-box;
+    padding: 80px 60px 78px;
+
+    @include mobile {
+			padding: 40px 16px;
+		}
+  }
+
+  &-right {
+    box-sizing: border-box;
+    &-item {
+      @include center;
+      flex-direction: column;
+      justify-content: space-between;
+      box-sizing: border-box;
+
+      &--text {
+        @include mobile {
+          height: auto;
+        }
+      }
+    }
+
+  }
+
+  &-desc {
+    padding-bottom: 54px;
+    border-bottom: 1px solid $border-color;
+    margin-top: 16px;
+  }
+}

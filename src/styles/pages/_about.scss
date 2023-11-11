@@ -1,0 +1,14 @@
+.about {
+	&-left , &-right {
+		box-sizing: border-box;
+		padding: 80px;
+
+		@include mobile {
+			padding: 40px 16px;
+		}
+	}
+
+	&-desc {
+		margin-bottom: 63px;
+	}
+}

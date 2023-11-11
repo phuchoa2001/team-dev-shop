@@ -1,0 +1,23 @@
+.subcriptions {
+
+  &-right {
+    padding: 204px 80px;
+
+    @include mobile {
+      padding: 40px 16px;
+    }
+  }
+
+  &-desc {
+    margin-bottom: 63px;
+  }
+
+  &-box-button {
+    width: 100%;
+
+    & .button {
+      width: 100%;
+      text-align: center;
+    }
+  }
+} 

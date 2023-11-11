@@ -1,0 +1,22 @@
+.button {
+  @include center;
+  color: $text-color;
+  font-weight: 500;
+  line-height: 120%; /* 19.2px */
+  text-transform: uppercase;
+  border: 1px solid $border-color;
+  padding: 16px 24px;
+  text-decoration: none;
+  display: inline-block;
+
+  &--black.button {
+    background: $bg-black;
+    color: $text-white;
+  }
+
+  &--ghost.button {
+    color: $text-white;
+    background: transparent;
+    border: 1px solid $border-white;
+  }
+}

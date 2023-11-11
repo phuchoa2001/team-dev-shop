@@ -1,0 +1,27 @@
+.navigation {
+  @include space-between;
+  align-items: center;
+  background-color: $bg-color;
+  height: 83px;
+  border-bottom: 1px solid $border-color;
+  border-top: 1px solid $border-color;
+
+  .nav-left, .nav-right {
+    display: flex;
+  }
+
+  .nav-item {
+    width: 180px;
+    height: 83px;
+    @include center;
+    text-decoration: none;
+    color: $text-color;
+    &.active, &:hover {
+      color: $primary-color; 
+    }
+  }
+
+  @include tablet {
+    display: none;
+  }
+}

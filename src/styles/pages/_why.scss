@@ -1,0 +1,22 @@
+.why {
+	&_left , &_right {
+		box-sizing: border-box;
+		padding: 80px;
+
+    @include mobile {
+      padding: 40px 16px;
+    }
+	}
+
+  &_right {
+    padding: 0px;
+  }
+  
+  &_box {
+    padding: 80px;
+
+    @include mobile {
+      padding: 40px 16px;
+    }
+  }
+}

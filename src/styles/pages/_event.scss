@@ -1,0 +1,27 @@
+.event {
+  background: url("../../../src/image/event_Image.jpg");
+  height: 720px;
+  max-width: 1440px;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  @include center;
+
+  @include mobile {
+    padding: 40px 16px;
+  }
+
+  &-box-button {
+    width: 100%;
+
+    & .button {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  &-desc {
+    width: 100%;
+    max-width: 586px;
+  }
+}

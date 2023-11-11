@@ -1,0 +1,89 @@
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin mobile {
+  @media (max-width: $breakpoint-mobile) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: $breakpoint-desktop) {
+    @content;
+  }
+}
+
+@mixin large-desktop {
+  @media (max-width: $breakpoint-large-desktop) {
+    @content;
+  }
+}
+
+@mixin border-remove {
+  @each $bp, $bp-value in $breakpoints {
+    .border-#{$bp}-t-none {
+      @media (max-width: $bp-value) {
+        border-top: none !important;
+      }
+    }
+
+    .border-#{$bp}-b-none {
+      @media (max-width: $bp-value) {
+        border-bottom: none !important;
+      }
+    }
+
+    .border-#{$bp}-r-none {
+      @media (max-width: $bp-value) {
+        border-right: none !important;
+      }
+    }
+
+    .border-#{$bp}-l-none {
+      @media (max-width: $bp-value) {
+        border-left: none !important;
+      }
+    }
+
+    .border-#{$bp}-t {
+      @media (max-width: $bp-value) {
+        border-top: 1px solid $border-color;
+      }
+    }
+
+    .border-#{$bp}-b {
+      @media (max-width: $bp-value) {
+        border-bottom: 1px solid $border-color;
+      }
+    }
+
+    .border-#{$bp}-r {
+      @media (max-width: $bp-value) {
+        border-right: 1px solid $border-color;
+      }
+    }
+
+    .border-#{$bp}-l {
+      @media (max-width: $bp-value) {
+        border-left: 1px solid $border-color;
+      }
+    }
+  }
+}
+
+@include border-remove;
+
